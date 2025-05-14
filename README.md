@@ -7,10 +7,7 @@ If you'd like to load **all Google Fonts dynamically**, uncomment the API sectio
 
 ```js
 const GOOGLE_FONTS_API_KEY = "YOUR_API_KEY_HERE";
-
-
-
----
+```
 
 ✅ Place the link **after the code block** and **outside any triple backticks (` ``` )**.
 
