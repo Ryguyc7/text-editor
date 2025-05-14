@@ -7,3 +7,5 @@ If you'd like to load **all Google Fonts dynamically**, uncomment the API sectio
 
 ```js
 const GOOGLE_FONTS_API_KEY = "YOUR_API_KEY_HERE";
+
+https://ryguyc7.github.io/text-editor/ 
