@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bubble Text Editor</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+  <div class="center-wrapper">
+    <div class="preview-wrapper">
+      <h1 id="preview">Bubble</h1>
+    </div>
+
+    <div class="editor">
+      <div class="tabs">
+        <button class="tab active" data-tab="text">Text</button>
+        <button class="tab" data-tab="styles">Styles</button>
+        <button class="tab" data-tab="download">Download</button>
+      </div>
+
+      <div class="tab-content active" id="text">
+        <textarea id="textInput">Bubble</textarea>
+        <label>Font
+          <input type="text" id="fontSearch" placeholder="Search fonts...">
+          <select id="fontPicker"></select>
+        </label>
+        <label>Zoom<input type="range" id="zoom" min="0.5" max="2" step="0.1" value="1" /></label>
+        <label>Character Spacing<input type="range" id="spacing" min="0" max="10" step="0.5" value="0" /></label>
+        <label>Line Height<input type="range" id="lineHeight" min="1" max="3" step="0.1" value="1" /></label>
+        <label>Rotation<input type="range" id="rotation" min="-180" max="180" value="0" /></label>
+      </div>
+
+     <div class="tab-content" id="styles">
+  <div class="style-group-grid">
+  
+    <div class="style-group">
+      <div class="style-group-title">Colors</div>
+      <label>Text Color: <input type="color" id="textColor" value="#3399ff" /></label>
+      <label>Background Color: <input type="color" id="backgroundColor" value="#ffffff" /></label>
+    </div>
+
+    <div class="style-group">
+      <div class="style-group-title">Gradient</div>
+      <label><input type="checkbox" id="gradient"> Enable Gradient</label>
+      <label>Gradient Color 1: <input type="color" id="gradientColor1" value="#3399ff" /></label>
+      <label>Gradient Color 2: <input type="color" id="gradientColor2" value="#66ccff" /></label>
+      <label>Gradient Angle: <input type="range" id="gradientAngle" min="0" max="360" value="90" /></label>
+    </div>
+
+    <div class="style-group">
+      <div class="style-group-title">Shadow</div>
+      <label><input type="checkbox" id="shadow"> Enable Shadow</label>
+      <label>Shadow Color: <input type="color" id="shadowColor" value="#000000" /></label>
+      <label>Shadow X Offset: <input type="range" id="shadowX" min="-20" max="20" value="2" /></label>
+      <label>Shadow Y Offset: <input type="range" id="shadowY" min="-20" max="20" value="4" /></label>
+      <label>Shadow Blur: <input type="range" id="shadowBlur" min="0" max="30" value="10" /></label>
+    </div>
+
+    <div class="style-group">
+      <div class="style-group-title">Outline</div>
+      <label><input type="checkbox" id="outline"> Enable Outline</label>
+      <label>Outline Width: <input type="range" id="outlineWidth" min="0" max="10" value="2" /></label>
+      <label>Outline Color: <input type="color" id="outlineColor" value="#000000" /></label>
+    </div>
+
+  </div>
+</div>
+
+      <div class="tab-content" id="download">
+        <label>Export Quality
+          <select id="quality">
+            <option value="1">Medium</option>
+            <option value="2">High</option>
+            <option value="3">Max</option>
+          </select>
+        </label>
+        <button id="downloadPNG">Download PNG</button>
+        <button id="copyImage">Copy to Clipboard</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
